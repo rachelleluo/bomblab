@@ -2,7 +2,8 @@ This is bomb 1341.
 
 It belongs to rtl64 (rtl64@scarletmail.rutgers.edu)
 
-Here is my process for defusing my bomb.
+Here is my process for defusing my bomb. Please note, I completed this assignment in early May 2024 and I am writing this
+readme file a few months later. There may be some discrepancies/inaccuracies.
 
 Phase 1:
 Going into the bomb.s file, find the phase_1 section. It will look like this:
