@@ -129,7 +129,10 @@ Going to the bomb.s file, find the phase_3 section. It will look like this:
 This one is a bit hard to explain, but this youtube video does a great job explaining how to diffuse this phase.
 https://www.youtube.com/watch?v=6QC_j7mL2c4 
 
-Phase 4: 
+Phase 4:
+The video here is the tutorial I followed to help me defuse this phase. https://www.youtube.com/watch?v=zJRBRNveALk&t=31s
+
+Phase 5: 
 Again, go to the bomb.s file and find the phase_4 section. It is very long, so I won't be pasting it here.
 What this phase is essentially doing, is it is looping through a 6 character string. It assigns each character a number
 then finds the sum of the string. That is the simplest way to explain it. Step through the bomb with a string like abcdef. 
@@ -139,7 +142,7 @@ cmp    %eax,0x4(%rsp). You should find the value of rsp and multiply by 4. This 
 the numbers you found, you should be able to make any 6 character string with any letter as long as their corresponding
 numbers equal the sum it is being compared to. In this case, the solution was apomoo.
 
-Phase 5:
+Phase 6:
 Again, go to the bomb.s file and find the phase_5 section. In short, the assembly code has 6 nodes. 5 nodes have values that
 you can find fairly easily by just stepping through the code. The last node, has a hidden value. The assembly code
 wants to know the order of the nodes from least to greatest (certain bombs may ask from greatest to least). Find the values
