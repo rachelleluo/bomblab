@@ -68,9 +68,9 @@ Going into the bomb.s file, find the phase_2 section. It will look like this:
 On line 38, it is calling a function called compare 6 numbers. Knowing this, we can assume that the answer will be 6 numbers.
 The bomb is going through each one of your numbers and comparing it to the answer. If a number is correct, it will jump
 over the explode bomb. If it is incorrect, it will explode. You can technically brute force to find the answer. Starting with
-the input 1 2 3 4 5 6, use the debugger to step through one step at a time. Check to see if the first number 1 explodes the 
-bomb. If it doesn't, you know that the first number is 1. If it does, then the first number is 1. If you continue this process,
-you will see the answer is 1 2 3 5 7 10.
+the input 1 2 3 4 5 6, use the debugger to step through one step at a time. Check to see if the first number 1 explodes 
+the bomb. If it doesn't, you know that the first number is 1. If it does, then the first number is not 1. If you continue 
+this process, you will see the answer is 1 2 3 5 7 10.
 
 Phase 3:
 Going to the bomb.s file, find the phase_3 section. It will look like this:
@@ -132,9 +132,9 @@ https://www.youtube.com/watch?v=6QC_j7mL2c4
 Phase 4: 
 Again, go to the bomb.s file and find the phase_4 section. It is very long, so I won't be pasting it here.
 What this phase is essentially doing, is it is looping through a 6 character string. It assigns each character a number
-then finds the sum of the string. That is the simplest way to put it. Again, you can brute force this. Step through the
-bomb with a string like abcdef. At each step, see what value it assigns a, b, c, d, e, and f. Take note of this. Continue 
-this process until you've tested every letter of the alphabet. There is a very important compare statement 
+then finds the sum of the string. That is the simplest way to explain it. Step through the bomb with a string like abcdef. 
+At each step, see what value it assigns a, b, c, d, e, and f. Take note of this. Continue this process until 
+you've tested every letter of the alphabet. There is a very important compare statement 
 cmp    %eax,0x4(%rsp). You should find the value of rsp and multiply by 4. This should be the sum of the string. Given
 the numbers you found, you should be able to make any 6 character string with any letter as long as their corresponding
 numbers equal the sum it is being compared to. In this case, the solution was apomoo.
