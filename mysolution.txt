@@ -1,0 +1,6 @@
+The early bird gets the worm.
+1 2 3 5 7 10
+2 381
+384 4
+apomoo
+2 5 4 3 6 1
